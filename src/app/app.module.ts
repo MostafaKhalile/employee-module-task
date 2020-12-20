@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AddEmployeeComponent } from './modules/employees/components/add-employee/add-employee.component';
 import { SearchEmployeeComponent } from './modules/employees/components/search-employee/search-employee.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { SearchEmployeeComponent } from './modules/employees/components/search-e
     AddEmployeeComponent,
     SearchEmployeeComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, NgbModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
