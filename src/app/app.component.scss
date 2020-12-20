@@ -1,0 +1,19 @@
+.vertical-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.horizontal-content {
+    display: flex;
+}
+
+.side-menu {
+    flex: 0 0 18%;
+    background-color: var(--dark);
+    min-height: 90vh;
+}
+
+.routing-body {
+    flex: 1;
+}

@@ -1,0 +1,16 @@
+.side-nav {
+    &__header {
+        padding: 3rem;
+        color: var(--white);
+    }
+    &__list-item {
+        outline: none;
+        cursor: pointer;
+        padding: 2rem;
+        color: var(--white);
+        &:hover,
+        &:visited {
+            background-color: var(--gray);
+        }
+    }
+}

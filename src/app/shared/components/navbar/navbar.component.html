@@ -1,0 +1,16 @@
+<nav class="navbar  d-flex justify-content-between navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+        <div class="navbar__date-box">
+            <p class="navbar__date">{{getTodayDate}}</p>
+        </div>
+
+        <div ngbDropdown class="user-nav d-inline-block ">
+            <button class="btn btn-outline-dark text-white " id="dropdownBasic1" ngbDropdownToggle>Mostafa Khalile</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1 bg-dark">
+                <button ngbDropdownItem *ngFor="let element of dropDownElements" class="text-uppercase user-nav__item">{{element}}</button>
+            </div>
+        </div>
+
+    </div>
+</nav>
