@@ -2,26 +2,26 @@
     <form [formGroup]="searchEmployees" (ngSubmit)="submitForm()" #form="ngForm">
         <div class="row justify-content-between mb-5 mt-5">
             <div class="col-md-4 col-sm-12 ">
-                <label for="name" class="mr-3">Employee Name</label>
-                <input id="name" type="text" class="form-control" formControlName="empName" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <label for="name" class="mr-3">{{"EmployeeName"| translate}}</label>
+                <input id="name" type="text" [placeholder]="'placeholder.EmployeeName' | translate" class="form-control" formControlName="empName" aria-label="Username" aria-describedby="basic-addon1">
                 <span class=" text-danger" *ngIf="!searchEmployees.get('empName').valid && searchEmployees.get('empName').touched">
-                    <sup>*</sup>Please Select a valid department
+                    <sup>*</sup>{{"Validations.name"|translate}}
                 </span>
             </div>
             <div class="col-md-4 col-sm-12 ">
-                <label class="mr-3">Department </label>
+                <label class="mr-3">{{"Department"|translate}} </label>
                 <select class="custom-select " formControlName="department">
-                     <option value="">Choose department</option>
+                     <option value="">{{"ChooseDepartment"|translate}}</option>
                      <option *ngFor="let department of Departments" [ngValue]="department">{{department}}</option>
                   </select>
                 <span class="text-danger" *ngIf="!searchEmployees.get('department').valid && searchEmployees.get('department').touched">
-                    <sup>*</sup>Please Select a valid department
+                    <sup>*</sup>{{"Validations.department"|translate}}
                 </span>
             </div>
             <div class="col-md-4 col-sm-12 align-self-end ">
-                <button type="submit" class="btn btn-danger btn-lg btn-block">Search for employee</button>
+                <button type="submit" class="btn btn-danger btn-lg btn-block">{{"Search"|translate}}</button>
                 <span class=" text-danger" *ngIf="!searchEmployees.valid && searchEmployees.touched">
-                    <sup>*</sup>Please Enter a valid data
+                    <sup>*</sup>{{"Validations.data"|translate}}
                 </span>
             </div>
         </div>
@@ -33,11 +33,11 @@
                 <th class="data-table__header" scope="col ">
                     <input type="checkbox" [checked]="all"></th>
                 <th class="data-table__header" scope="col ">#</th>
-                <th class="data-table__header" scope="col ">Name</th>
-                <th class="data-table__header" scope="col ">Code</th>
-                <th class="data-table__header" scope="col ">Department</th>
-                <th class="data-table__header" scope="col ">Birthday</th>
-                <th class="data-table__header" scope="col ">Gender</th>
+                <th class="data-table__header" scope="col ">{{"TableHeaders.name"|translate}}</th>
+                <th class="data-table__header" scope="col ">{{"TableHeaders.code"|translate}}</th>
+                <th class="data-table__header" scope="col ">{{"TableHeaders.department"|translate}}</th>
+                <th class="data-table__header" scope="col ">{{"TableHeaders.birthDate"|translate}}</th>
+                <th class="data-table__header" scope="col ">{{"TableHeaders.gender"|translate}}</th>
             </tr>
         </thead>
         <tbody class="data-table__body">

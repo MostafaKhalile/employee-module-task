@@ -13,16 +13,25 @@
     "male": "ذكر",
     "female": "أنثى",
     "ADD": "إضافة",
+    "Search": "بحث عن الموظف",
     "placeholder": {
         "EmployeeName": "اسم الموظف",
         "EmployeeCode": "رقم الموظف"
+    },
+    "TableHeaders": {
+        "name": "الإسم",
+        "code": "الكود",
+        "department": "القسم",
+        "birthDate": "تاريخ الميلاد",
+        "gender": "النوع"
     },
     "Validations": {
         "name": "تأكد من صحة الكود",
         "code": "أدخل رقم صحيح موجب",
         "department": "أختر حقل صالح",
         "gender": "اختر نوع الموظف",
-        "date": "اختر تاريخ صالح"
+        "date": "اختر تاريخ صالح",
+        "data": "تأكد من صحة البيانات"
 
     }
 }

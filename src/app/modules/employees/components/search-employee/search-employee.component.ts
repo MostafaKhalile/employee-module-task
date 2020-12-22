@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { Employee } from './../../../../models/employee.model';
 import { EmployeesService } from './../../../../services/employees.service';
 import { Component, OnInit } from '@angular/core';
@@ -32,7 +33,8 @@ export class SearchEmployeeComponent implements OnInit {
   currentPage = 4;
   constructor(
     public formBuilder: FormBuilder,
-    private employeesService: EmployeesService
+    private employeesService: EmployeesService,
+    public translate: TranslateModule
   ) {
     this.employees = this.employeesService.employees;
     this.selection = [];

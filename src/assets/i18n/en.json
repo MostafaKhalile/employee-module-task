@@ -3,6 +3,7 @@
     "Logo": "Logo",
     "navigationModel": "Navigation Model",
     "AddEmployee": "Add Employee",
+    "SearchEmployee": "Search Employee",
     "EmployeeName": "Employee Name",
     "Department": "Department",
     "ChooseDepartment": "Choose department",
@@ -12,16 +13,25 @@
     "male": "male",
     "female": "female",
     "ADD": "ADD",
+    "Search": "Search for Employee",
     "placeholder": {
         "EmployeeName": "Employee Name",
         "EmployeeCode": "Employee Code"
+    },
+    "TableHeaders": {
+        "name": "name",
+        "code": "code",
+        "department": "department",
+        "birthDate": "name",
+        "gender": "gender"
     },
     "Validations": {
         "name": "Please Enter a valid Name",
         "code": "Please Enter a valid positive No.",
         "department": "Please Select a valid Department",
         "gender": "Please Select a gender",
-        "date": "Please Select a valid date."
+        "date": "Please Select a valid date.",
+        "data": "Please Enter a valid data"
 
     }
 

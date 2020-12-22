@@ -9,3 +9,12 @@ p {
 body {
     direction: ltr;
 }
+
+.side-nav {
+    &__header {
+        text-align: left;
+    }
+    &__list-item {
+        text-align: left;
+    }
+}

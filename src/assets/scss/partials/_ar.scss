@@ -13,9 +13,15 @@
             }
         }
 
-        // .addemployee-container {
-        //     direction: rtl;
-        // }
+        .side-nav {
+            &__header {
+                text-align: right;
+            }
+            &__list-item {
+                text-align: right;
+            }
+        }
+
         .body-content {
             direction: rtl;
         }
