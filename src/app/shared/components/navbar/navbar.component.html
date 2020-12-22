@@ -1,8 +1,13 @@
-<nav class="navbar  d-flex justify-content-between navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
+<nav class="navbar   navbar-dark bg-dark">
+    <div class="navbar__container">
+        <a class="navbar-brand" href="#">{{"Logo" | translate}}</a>
         <div class="navbar__date-box">
             <p class="navbar__date">{{getTodayDate}}</p>
+        </div>
+        <div class="row">
+
+            <Button (click)="changeCurrentLang('en')" class="btn btn-secondary">En</Button>
+            <Button (click)="changeCurrentLang('ar')" class="btn btn-secondary">Ar</Button>
         </div>
 
         <div ngbDropdown class="user-nav d-inline-block ">

@@ -3,5 +3,13 @@
 
 /* Importing Bootstrap SCSS file. */
 
+.ltr {
+    @import './assets/scss/partials/en';
+}
+
+.rtl {
+    @import './assets/scss/partials/ar';
+}
+
 @import '~bootstrap/scss/bootstrap';
 @import'./assets/scss/main.scss';

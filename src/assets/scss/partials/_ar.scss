@@ -1,0 +1,14 @@
+        .base-align {
+            text-align: right;
+            color: green;
+        }
+
+        .horizontal-content {
+            flex-direction: row-reverse;
+        }
+
+        .navbar {
+            &__container {
+                flex-direction: row-reverse;
+            }
+        }

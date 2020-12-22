@@ -1,10 +1,12 @@
-<app-navbar></app-navbar>
-<div class="vertical-content">
-    <div class="horizontal-content">
-        <app-side-menu class="side-menu"></app-side-menu>
-        <div class="body-content">
-            <router-outlet></router-outlet>
+<div [ngClass]="'currentTheme' | translate">
+    <app-navbar></app-navbar>
+    <div class="vertical-content">
+        <div class="horizontal-content">
+            <app-side-menu class="side-menu"></app-side-menu>
+            <div class="body-content">
+                <router-outlet></router-outlet>
+            </div>
         </div>
+        <app-footer></app-footer>
     </div>
-    <app-footer></app-footer>
 </div>
