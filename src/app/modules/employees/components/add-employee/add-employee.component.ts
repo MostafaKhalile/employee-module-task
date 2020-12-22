@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { Employee } from './../../../../models/employee.model';
 import { Component, OnInit } from '@angular/core';
 import {
@@ -31,7 +32,8 @@ export class AddEmployeeComponent implements OnInit {
   myDateValue: Date;
   constructor(
     private employeesService: EmployeesService,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    public translate: TranslateModule
   ) {
     this.minDate = new Date();
     this.maxDate = new Date();

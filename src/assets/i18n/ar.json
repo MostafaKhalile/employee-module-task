@@ -1,6 +1,28 @@
 {
     "currentTheme": "rtl",
     "Logo": "Logo",
-    "navigationModel": "Navigation Model"
+    "navigationModel": "Navigation Model",
+    "AddEmployee": "إضافة موظف",
+    "SearchEmployee": "بحث عن موظف",
+    "EmployeeName": "اسم الموظف",
+    "Department": "القسم",
+    "ChooseDepartment": "اختر قسم",
+    "EmployeeCode": "رقم الموظف",
+    "BirthDate": "تاريخ الميلاد",
+    "Gender": "النوع",
+    "male": "ذكر",
+    "female": "أنثى",
+    "ADD": "إضافة",
+    "placeholder": {
+        "EmployeeName": "اسم الموظف",
+        "EmployeeCode": "رقم الموظف"
+    },
+    "Validations": {
+        "name": "تأكد من صحة الكود",
+        "code": "أدخل رقم صحيح موجب",
+        "department": "أختر حقل صالح",
+        "gender": "اختر نوع الموظف",
+        "date": "اختر تاريخ صالح"
 
+    }
 }

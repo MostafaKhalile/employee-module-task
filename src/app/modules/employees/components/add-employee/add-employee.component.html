@@ -1,34 +1,26 @@
-<!-- <div class="form-group">
-    <div class="input-group">
-        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
-        </div>
-    </div>
-</div> -->
-<div class="container">
+<div class="addemployee-container">
     <div class="row justify-content-center mt-auto">
         <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
             <form [formGroup]="addEmployeeForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col-xs-12 col-md-6  mb-3">
                         <div class="form-group">
-                            <label for="employeeName">Employee Name</label>
-                            <input type="text" placeholder="Employee Name" formControlName="employeeName" id="employeeName" class="form-control">
+                            <label for="employeeName">{{"EmployeeName"| translate}}</label>
+                            <input type="text" [placeholder]="'placeholder.EmployeeName' | translate" placeholder="Employee Name" formControlName="employeeName" id="employeeName" class="form-control">
                             <span class=" text-danger" *ngIf="!addEmployeeForm.get('employeeName').valid && addEmployeeForm.get('employeeName').touched">
-                    <sup>*</sup>Please Enter a valid Name
+                    <sup>*</sup>{{"Validations.name"|translate}}
                 </span>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6 mb-3">
                         <div class="form-group">
-                            <label for="department"> Department</label>
+                            <label for="department"> {{"Department"|translate}}</label>
                             <select id="department" class="custom-select " formControlName="department">
-                     <option value="">Choose department</option>
+                     <option value="">{{"ChooseDepartment"|translate}}</option>
                      <option *ngFor="let department of Departments" [ngValue]="department">{{department}}</option>
                   </select>
                             <span class=" text-danger" *ngIf="!addEmployeeForm.get('department').valid && addEmployeeForm.get('department').touched">
-                    <sup>*</sup>Please Select a valid Department
+                    <sup>*</sup>{{"Validations.department"|translate}}
                 </span>
                         </div>
                     </div>
@@ -36,40 +28,40 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6 mb-3">
                         <div class="form-group">
-                            <label for="employeeCode">Employee Code</label>
-                            <input type="number" min="1" placeholder="Employee Code" id="employeeCode" formControlName="employeeCode" class="form-control">
+                            <label for="employeeCode">{{"EmployeeCode"|translate}}</label>
+                            <input type="number" min="1" [placeholder]="'placeholder.EmployeeCode' | translate" id="employeeCode" formControlName="employeeCode" class="form-control">
                             <span class=" text-danger" *ngIf="!addEmployeeForm.get('employeeCode').valid && addEmployeeForm.get('employeeCode').touched">
-                    <sup>*</sup>Please Enter a valid positive No.
+                    <sup>*</sup>{{"Validations.code"|translate}}
                 </span>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6 mb-3">
                         <div class="form-group">
-                            <label for="username">Birthdate</label>
+                            <label for="username">{{"BirthDate"|translate}}</label>
                             <input type="text" class="form-control" formControlName="birthDate" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue">
-                            <span class=" text-danger" *ngIf="!addEmployeeForm.get('employeeCode').valid && addEmployeeForm.get('employeeCode').touched">
-                    <sup>*</sup>Please Select a valid date.
+                            <span class=" text-danger" *ngIf="!addEmployeeForm.get('birthDate').valid && addEmployeeForm.get('birthDate').touched">
+                    <sup>*</sup>{{"Validations.date"|translate}}
                 </span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-6  d-flex flex-row justify-content-around ">
-                        <label for="username">Gender</label>
+                        <label for="username">{{"Gender"|translate}}</label>
                         <div class="radio" *ngFor="let gender of genders">
                             <label class="d-flex justify-content-around ">
               <input class="mr-2" formControlName="gender"
                 type="radio"
-                [value]="gender">{{ gender }}
+                [value]="gender">{{ gender|translate }}
             </label>
 
                         </div>
                         <span class=" text-danger" *ngIf="!addEmployeeForm.get('gender').valid && addEmployeeForm.get('gender').touched">
-                    <sup>*</sup>Please Select a gender
+                    <sup>*</sup> {{"Validations.gender"|translate}}
                 </span>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <button type="submit" class="btn btn-success  btn-block">ADD</button></div>
+                        <button type="submit" class="btn btn-success  btn-block">{{"ADD"|translate}}</button></div>
                 </div>
             </form>
         </div>

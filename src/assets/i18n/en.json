@@ -1,5 +1,28 @@
 {
     "currentTheme": "ltr",
     "Logo": "Logo",
-    "navigationModel": "Navigation Model"
+    "navigationModel": "Navigation Model",
+    "AddEmployee": "Add Employee",
+    "EmployeeName": "Employee Name",
+    "Department": "Department",
+    "ChooseDepartment": "Choose department",
+    "EmployeeCode": "Employee Code",
+    "BirthDate": "BirthDate",
+    "Gender": "Gender",
+    "male": "male",
+    "female": "female",
+    "ADD": "ADD",
+    "placeholder": {
+        "EmployeeName": "Employee Name",
+        "EmployeeCode": "Employee Code"
+    },
+    "Validations": {
+        "name": "Please Enter a valid Name",
+        "code": "Please Enter a valid positive No.",
+        "department": "Please Select a valid Department",
+        "gender": "Please Select a gender",
+        "date": "Please Select a valid date."
+
+    }
+
 }

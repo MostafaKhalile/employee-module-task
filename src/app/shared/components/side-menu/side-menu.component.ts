@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./side-menu.component.scss'],
 })
 export class SideMenuComponent implements OnInit {
-  constructor(private translate: TranslateService) {}
+  constructor(public translate: TranslateService) {}
 
   ngOnInit(): void {}
 }
