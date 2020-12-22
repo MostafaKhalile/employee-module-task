@@ -1,14 +1,14 @@
 import { TranslateModule } from '@ngx-translate/core';
 import { Employee } from './../../../../models/employee.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeesService } from 'src/app/services/employees.service';
+import { ToastService } from 'src/app/services/toat.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -33,7 +33,8 @@ export class AddEmployeeComponent implements OnInit {
   constructor(
     private employeesService: EmployeesService,
     public formBuilder: FormBuilder,
-    public translate: TranslateModule
+    public translate: TranslateModule,
+    public toastService: ToastService
   ) {
     this.minDate = new Date();
     this.maxDate = new Date();
@@ -60,6 +61,14 @@ export class AddEmployeeComponent implements OnInit {
     });
   }
 
+  // Show Success Toast
+  showSuccess(message: string): any {
+    this.toastService.show(message, {
+      classname: 'bg-success text-light',
+      delay: 1000,
+    });
+  }
+
   onSubmit(): void {
     console.log(this.addEmployeeForm);
 
@@ -83,9 +92,13 @@ export class AddEmployeeComponent implements OnInit {
           newEmployee.gender
         )
       );
-      // this.addEmployeeForm.reset();
+      this.showSuccess('Employee Added Succesfully');
+      this.addEmployeeForm.reset();
     } else {
       this.addEmployeeForm.markAllAsTouched();
     }
+  }
+  isTemplate(toast): any {
+    return toast.textOrTpl instanceof TemplateRef;
   }
 }
