@@ -10,7 +10,7 @@ export class EmployeesService {
     new Employee(
       1,
       'Ahmed Mohamed',
-      '111',
+      '1',
       'Frontend development',
       '2000-12-13T00:00:00.000Z',
       'Male'
@@ -18,15 +18,15 @@ export class EmployeesService {
     new Employee(
       2,
       'maha Hamed',
-      '222',
-      'UI/Ux development',
+      '2',
+      'UI/UX development',
       '2000-12-13T00:00:00.000Z',
-      'Male'
+      'Female'
     ),
     new Employee(
       3,
       'Islam Mouneer',
-      '333',
+      '3',
       'Project Management',
       '2000-12-13T00:00:00.000Z',
       'Male'
@@ -34,10 +34,18 @@ export class EmployeesService {
     new Employee(
       4,
       'Motaz Kamel',
-      '444',
+      '4',
       'HR Management',
       '2000-12-13T00:00:00.000Z',
       'Male'
+    ),
+    new Employee(
+      5,
+      'Merna Gamil',
+      '444',
+      'Backend development',
+      '2000-12-13T00:00:00.000Z',
+      'Female'
     ),
   ];
 }

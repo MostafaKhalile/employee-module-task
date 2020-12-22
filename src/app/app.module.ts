@@ -11,7 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddEmployeeComponent } from './modules/employees/components/add-employee/add-employee.component';
 import { SearchEmployeeComponent } from './modules/employees/components/search-employee/search-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

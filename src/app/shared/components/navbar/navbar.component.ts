@@ -10,11 +10,6 @@ export class NavbarComponent implements OnInit {
   get getTodayDate(): string {
     const today = new Date();
     const date = today.toDateString();
-    // today.getFullYear() +
-    // '-' +
-    // (today.getMonth() + 1) +
-    // '-' +
-    // today.getDate();
     return date;
   }
   dropDownElements: string[] = ['profile', 'settings', 'Department', 'logout'];

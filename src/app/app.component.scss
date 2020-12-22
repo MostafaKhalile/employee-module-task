@@ -6,6 +6,11 @@
 
 .horizontal-content {
     display: flex;
+    width: 100%;
+}
+
+.body-content {
+    width: 100%;
 }
 
 .side-menu {
@@ -16,4 +21,8 @@
 
 .routing-body {
     flex: 1;
+}
+
+app-search-employee {
+    width: 100% !important;
 }
