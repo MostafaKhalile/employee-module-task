@@ -7,7 +7,6 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-// declare var $: any;
 
 @Component({
   selector: 'app-search-employee',
